@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome~ 邓德荣 - Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('back.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        .header {
+            background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .header a, .header button {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .header button:hover, .header a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile {
+            flex: 1 1 300px;
+            text-align: center;
+            padding: 20px;
+        }
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover; /* 确保图片保持比例并覆盖 */
+        }
+        .profile h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .profile p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .profile ul {
+            list-style: none;
+            padding: 0;
+        }
+        .profile ul li {
+            margin: 10px 0;
+        }
+        .profile ul li a {
+            text-decoration: none;
+            color: #1a73e8;
+        }
+        .content {
+            flex: 2 1 600px;
+            padding: 20px;
+        }
+        .content h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .content p {
+            line-height: 1.6;
+            color: #555;
+        }
+        .content a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .highlights, .projects, .education, .experience, .skills, .social-practice {
+            margin-top: 20px;
+        }
+        .highlights ul, .projects ul, .social-practice ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        .language-switch {
+            cursor: pointer;
+            color: #1a73e8;
+            font-weight: bold;
+            background-color: transparent;
+            border: none;
+        }
+        .project-images {
+            display: flex;
+            justify-content: space-between; /* 确保图片之间有间距 */
+            margin-top: 10px;
+        }
+
+        .project-images img {
+            width: 30%; /* 设置每张图片占容器的 30% 宽度 */
+            height: auto; /* 自动调整高度保持比例 */
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="#">邓德荣</a>
+        <div>
+            <a href="#">CV</a>
+            <button class="language-switch" onclick="switchLanguage()">English</button>
+        </div>
+    </div>
+    <div class="container" id="content">
+
+        <!-- 中文内容 -->
+        <div class="profile" id="profile-cn">
+            <img src="photo.jpg" alt="邓德荣">
+            <h2>邓德荣</h2>
+            <p>电子与计算机工程本科生，深圳北理莫斯科大学。致力于数据挖掘、算法优化与机器人设计。</p>
+            <ul>
+                <li>📍 深圳</li>
+                <li><a href="mailto:derongdeng.dero@gmail.com">Email</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Github</a></li>
+            </ul>
+        </div>
+
+        <div class="content" id="content-cn">
+            <h2>About Me</h2>
+            <p>我叫邓德荣，是深圳北理莫斯科大学电子与计算机工程系的本科生。我的研究兴趣包括数据挖掘、图像处理和智能系统设计。通过编程、建模和算法优化，致力于解决现实中的技术难题。我积极参与各类项目和比赛，并获得多项奖项和荣誉。</p>
+            
+            <div class="education">
+                <h2>教育经历</h2>
+                <p>深圳北理莫斯科大学</p>
+                <p>电子与计算机工程 本科 工程系</p>
+                <p>2021.09 - 2025.07</p>
+                <p>GPA: 3.74/4  87.25/100  </p>
+                <p>荣誉：英语四六级，俄语四级，校一等学业奖学金，优秀共青团员，优秀学生标兵(北理工)，校学生代表。</p>
+            </div>
+            
+            <div class="skills">
+                <h2>专业技能</h2>
+                <ul>
+                    <li>办公软件：熟练使用 Word，PowerPoint，Excel，飞书合作等办公软件。</li>
+                    <li>编程开发：C、C++、Python、Matlab、HTML开发语言，熟悉 Linux 系统。</li>
+                    <li>仿真软件：熟悉 Gis 遥感、Google Earth Pro 、Fushion360等仿真软件。</li>
+                </ul>
+            </div>
+            
+            <div class="projects">
+                <h2>项目与比赛经历</h2>
+                <ul>
+                    <li>
+                        <strong>COMAP 美国大学生数学建模比赛 (H奖) - 队长</strong> (2024.02 - 2024.05)
+                        <p>负责论文撰写、模型设计，建立潜水艇漂流预测模型，使用熵权法与贝叶斯定理优化模型。撰写并发布CPCI会议论文。</p>
+                        <div class="project-images">
+                            <img src="project1_img1.jpg" alt="COMAP 图片1">
+                            <img src="project1_img2.jpg" alt="COMAP 图片2">
+                            <img src="project1_img3.jpg" alt="COMAP 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>粤港澳大湾区（黄埔）国际算法算例大赛 (初赛八强，决赛十一)</strong> (2023.07 - 2023.11)
+                        <p>基于语言增强的图像新类别发现，使用 ChatGLM_v1.1 LLM 模型进行数据挖掘，撰写并提交TIP论文。</p>
+                        <div class="project-images">
+                            <img src="project2_img1.jpg" alt="算法大赛 图片1">
+                            <img src="project2_img2.jpg" alt="算法大赛 图片2">
+                            <img src="project2_img3.jpg" alt="算法大赛 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>第21届全国大学生机器人竞赛 (3V3 北极熊战队) - 核心组员</strong> (2021.09 - 2022.11)
+                        <p>参与设计与优化英雄轮组和哨兵快速变向模块，创新性地使用胀紧套，减少轮组整体重量并提高稳定性。</p>
+                        <div class="project-images">
+                            <img src="project3_img1.jpg" alt="机器人竞赛 图片1">
+                            <img src="project3_img2.jpg" alt="机器人竞赛 图片2">
+                            <img src="project3_img3.jpg" alt="机器人竞赛 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>广东省省级大学生创新训练计划 - 项目第一主持人</strong> (2023.06 - 至今)
+                        <p>带领团队完成 "商品描述自动生成" 平台开发，并参与 "互联网+ 创新创业大赛" 校赛，获得三等奖。</p>
+                        <div class="project-images">
+                            <img src="project4_img1.jpg" alt="创新训练计划 图片1">
+                            <img src="project4_img2.jpg" alt="创新训练计划 图片2">
+                            <img src="project4_img3.jpg" alt="创新训练计划 图片3">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <h2>实习经历</h2>
+                <ul>
+                    <li>
+                        <strong>国家超算中心 (深圳) 实习生</strong> (2024.05 - 至今)
+                        <p>帮助进行 AI 大模型 LLM 方面的专利转化与技术分析报告撰写。</p>
+                        <div class="project-images">
+                            <img src="internship1_img1.jpg" alt="国家超算中心 图片1">
+                            <img src="internship1_img2.jpg" alt="国家超算中心 图片2">
+                            <img src="internship1_img3.jpg" alt="国家超算中心 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>MPCI 实验室 (广东省省级实验室) 实习生</strong> (2023.06 - 2024.05)
+                        <p>参与远程环境搭建与项目开发管理，协助实验室完成项目开发与模型训练。</p>
+                        <div class="project-images">
+                            <img src="internship2_img1.jpg" alt="MPCI 实验室 图片1">
+                            <img src="internship2_img2.jpg" alt="MPCI 实验室 图片2">
+                            <img src="internship2_img3.jpg" alt="MPCI 实验室 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>深圳市惠博升科技有限公司 IC封装实习工程师</strong> (2022.07 - 2022.10)
+                        <p>帮助撰写封装技术文档，包括封装设计文档、工艺规范和测试报告。</p>
+                        <div class="project-images">
+                            <img src="internship3_img1.jpg" alt="惠博升科技 图片1">
+                            <img src="internship3_img2.jpg" alt="惠博升科技 图片2">
+                            <img src="internship3_img3.jpg" alt="惠博升科技 图片3">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="social-practice">
+                <h2>社会实践交流经历</h2>
+                <ul>
+                    <li>
+                        <strong>莫斯科大学交流与访问夏令营 (跨文化交流项目) 成员</strong> (2023.07 - 2023.08)
+                        <p>参观莫斯科大学实验室，参与跨文化交流项目。</p>
+                        <div class="project-images">
+                            <img src="social1_img1.jpg" alt="莫斯科大学 图片1">
+                            <img src="social1_img2.jpg" alt="莫斯科大学 图片2">
+                            <img src="social1_img3.jpg" alt="莫斯科大学 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>“多彩乡村·粤来粤好” 青年三下乡乡村振兴实践调研项目 - 调研成员</strong> (2022.07 - 2022.09)
+                        <p>参与乡村扶贫产业调研与公益支教活动，提交调研报告。</p>
+                        <div class="project-images">
+                            <img src="social2_img1.jpg" alt="三下乡实践 图片1">
+                            <img src="social2_img2.jpg" alt="三下乡实践 图片2">
+                            <img src="social2_img3.jpg" alt="三下乡实践 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>冬奥会开幕式无人机维护志愿者</strong> (2022.01 - 2022.02)
+                        <p>管理与维护无人机阵列，参与会场建设志愿服务。</p>
+                        <div class="project-images">
+                            <img src="social3_img1.jpg" alt="冬奥会 图片1">
+                            <img src="social3_img2.jpg" alt="冬奥会 图片2">
+                            <img src="social3_img3.jpg" alt="冬奥会 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>国际志愿者活动 (泰国) - 教学小组组长</strong> (2021.08 - 2021.09)
+                        <p>设计汉语文化课程，带领泰国乡镇小学学生学习中国传统文化。</p>
+                        <div class="project-images">
+                            <img src="social4_img1.jpg" alt="泰国志愿者 图片1">
+                            <img src="social4_img2.jpg" alt="泰国志愿者 图片2">
+                            <img src="social4_img3.jpg" alt="泰国志愿者 图片3">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 英文内容 -->
+        <div class="profile" id="profile-en" style="display:none;">
+            <img src="photo.jpg" alt="Derong Deng ">
+            <h2>Deng Derong</h2>
+            <p>Undergraduate in Electronic and Computer Engineering, Shenzhen MSU-BIT University. Interested in data mining, algorithm optimization, and robotics design.</p>
+            <ul>
+                <li>📍 Shenzhen</li>
+                <li><a href="mailto:derongdeng.dero@gmail.com">Email</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Github</a></li>
+            </ul>
+        </div>
+
+        <div class="content" id="content-en" style="display:none;">
+            <h2>About Me</h2>
+            <p>My name is Deng Derong, and I am an undergraduate student at Shenzhen MSU-BIT University, majoring in Electronic and Computer Engineering. My research interests include data mining, image processing, and intelligent system design. Through programming, modeling, and algorithm optimization, I aim to solve real-world technical challenges. I have actively participated in various projects and competitions and have won multiple awards and honors.</p>
+            
+            <div class="education">
+                <h2>Education</h2>
+                <p>Shenzhen MSU-BIT University</p>
+                <p>Bachelor in Electronic and Computer Engineering</p>
+                <p>2021.09 - 2025.07</p>
+                <p>GPA: 3.74/4  87.25/100  </p>
+                <p>Honors: Passed CET-4, CET-6, CRT-4, first and second-class scholarships, excellent Youth League member(From BIT), excellent student representative.</p>
+            </div>
+            
+            <div class="skills">
+                <h2>Professional Skills</h2>
+                <ul>
+                    <li>Office software: Proficient in Word, PowerPoint, Excel, Feishu collaboration tools.</li>
+                    <li>Programming languages: C, C++, Python, Matlab, HTML, familiar with Linux system.</li>
+                    <li>Simulation software: Familiar with GIS remote sensing, Fushion360, Google Earth Pro, and other simulation tools.</li>
+                </ul>
+            </div>
+            
+            <div class="projects">
+                <h2>Projects and Competitions</h2>
+                <ul>
+                    <li>
+                        <strong>COMAP Mathematical Contest in Modeling (H Award) - Team Leader</strong> (2024.02 - 2024.05)
+                        <p>Responsible for writing the paper and designing the model. Developed a drift prediction model for submarines using entropy weight method and Bayesian theory.</p>
+                        <div class="project-images">
+                            <img src="project1_img1.jpg" alt="COMAP 图片1">
+                            <img src="project1_img2.jpg" alt="COMAP 图片2">
+                            <img src="project1_img3.jpg" alt="COMAP 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Greater Bay Area International Algorithm Competition (Top 8 in preliminaries, Top 11 in finals)</strong> (2023.07 - 2023.11)
+                        <p>Worked on discovering new image categories with language enhancement, using ChatGLM_v1.1 LLM for data mining, co-authored a TIP(IEEE) paper.</p>
+                        <div class="project-images">
+                            <img src="project2_img1.jpg" alt="算法大赛 图片1">
+                            <img src="project2_img2.jpg" alt="算法大赛 图片2">
+                            <img src="project2_img3.jpg" alt="算法大赛 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>21st National University Robotics Competition (3V3 Polar Bear Team) - Core Member</strong> (2021.09 - 2022.11)
+                        <p>Involved in the design and optimization of the hero wheel group and sentinel turning mechanism, reducing overall weight and increasing stability.</p>
+                        <div class="project-images">
+                            <img src="project3_img1.jpg" alt="机器人竞赛 图片1">
+                            <img src="project3_img2.jpg" alt="机器人竞赛 图片2">
+                            <img src="project3_img3.jpg" alt="机器人竞赛 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Provincial University Innovation Training Program - Lead Project Host</strong> (2023.06 - Present)
+                        <p>Led the development of the "Automatic Product Description Generation" platform and participated in the "Internet+ Innovation and Entrepreneurship Competition," winning third prize in the school-level competition.</p>
+                        <div class="project-images">
+                            <img src="project4_img1.jpg" alt="创新训练计划 图片1">
+                            <img src="project4_img2.jpg" alt="创新训练计划 图片2">
+                            <img src="project4_img3.jpg" alt="创新训练计划 图片3">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <h2>Internship Experience</h2>
+                <ul>
+                    <li>
+                        <strong>National Supercomputing Center (Shenzhen) - Intern</strong> (2024.05 - Present)
+                        <p>Assisted in patent conversion and technical analysis reports for AI large model LLMs.</p>
+                        <div class="project-images">
+                            <img src="internship1_img1.jpg" alt="国家超算中心 图片1">
+                            <img src="internship1_img2.jpg" alt="国家超算中心 图片2">
+                            <img src="internship1_img3.jpg" alt="国家超算中心 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>MPCI Lab (Provincial Level Lab, Guangdong) - Intern</strong> (2023.06 - 2024.05)
+                        <p>Involved in remote environment setup and project management, assisting in project development and model training.</p>
+                        <div class="project-images">
+                            <img src="internship2_img1.jpg" alt="MPCI 实验室 图片1">
+                            <img src="internship2_img2.jpg" alt="MPCI 实验室 图片2">
+                            <img src="internship2_img3.jpg" alt="MPCI 实验室 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Huibosheng Technology Co., Ltd. - IC Packaging Intern Engineer</strong> (2022.07 - 2022.10)
+                        <p>Helped in drafting packaging technology documentation, including packaging design and testing reports.</p>
+                        <div class="project-images">
+                            <img src="internship3_img1.jpg" alt="惠博升科技 图片1">
+                            <img src="internship3_img2.jpg" alt="惠博升科技 图片2">
+                            <img src="internship3_img3.jpg" alt="惠博升科技 图片3">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="social-practice">
+                <h2>Social Practice and Exchange</h2>
+                <ul>
+                    <li>
+                        <strong>Moscow University Exchange Program (Cross-Cultural Exchange Project) - Member</strong> (2023.07 - 2023.08)
+                        <p>Visited laboratories at Moscow University and participated in cross-cultural exchange programs.</p>
+                        <div class="project-images">
+                            <img src="social1_img1.jpg" alt="莫斯科大学 图片1">
+                            <img src="social1_img2.jpg" alt="莫斯科大学 图片2">
+                            <img src="social1_img3.jpg" alt="莫斯科大学 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Youth Rural Revitalization Practice Research Program - Research Member</strong> (2022.07 - 2022.09)
+                        <p>Conducted rural revitalization research and participated in public teaching, submitting a report on the findings.</p>
+                        <div class="project-images">
+                            <img src="social2_img1.jpg" alt="三下乡实践 图片1">
+                            <img src="social2_img2.jpg" alt="三下乡实践 图片2">
+                            <img src="social2_img3.jpg" alt="三下乡实践 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Volunteer for Drone Management at Winter Olympics Opening Ceremony</strong> (2022.01 - 2022.02)
+                        <p>Maintained and managed drone arrays, participated in venue setup volunteer services.</p>
+                        <div class="project-images">
+                            <img src="social3_img1.jpg" alt="冬奥会 图片1">
+                            <img src="social3_img2.jpg" alt="冬奥会 图片2">
+                            <img src="social3_img3.jpg" alt="冬奥会 图片3">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>International Volunteer Program (Thailand) - Teaching Group Leader</strong> (2021.08 - 2021.09)
+                        <p>Designed Chinese cultural courses and led Thai students in learning traditional Chinese culture.</p>
+                        <div class="project-images">
+                            <img src="social4_img1.jpg" alt="泰国志愿者 图片1">
+                            <img src="social4_img2.jpg" alt="泰国志愿者 图片2">
+                            <img src="social4_img3.jpg" alt="泰国志愿者 图片3">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage() {
+            var profileCN = document.getElementById('profile-cn');
+            var contentCN = document.getElementById('content-cn');
+            var profileEN = document.getElementById('profile-en');
+            var contentEN = document.getElementById('content-en');
+            var langSwitch = document.querySelector('.language-switch');
+
+            if (profileCN.style.display === 'none') {
+                // 切换到中文
+                profileCN.style.display = 'block';
+                contentCN.style.display = 'block';
+                profileEN.style.display = 'none';
+                contentEN.style.display = 'none';
+                langSwitch.textContent = 'English';
+            } else {
+                // 切换到英文
+                profileCN.style.display = 'none';
+                contentCN.style.display = 'none';
+                profileEN.style.display = 'block';
+                contentEN.style.display = 'block';
+                langSwitch.textContent = '中文';
+            }
+        }
+    </script>
+</body>
+</html>
